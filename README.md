@@ -1,212 +1,153 @@
-# User Management System
+# UserManagementSystem
+The **User Management System** is a full-stack web application built using **React, Spring Boot, and MySQL** to manage users with basic CRUD operations. It has a simple frontend and REST APIs for handling data. The project is containerized using **Docker** and runs easily using **Docker Compose**.
 
-A full-stack **User Management System** built with **Spring Boot**, **React.js**, **MySQL**, and **Docker**. The application provides a secure and scalable platform for managing users, authentication, and role-based access through a modern web interface.
+
+
+A full-stack **User Management System** built using:
+- ⚛️ React (Frontend)
+- ☕ Spring Boot (Backend)
+- 🐬 MySQL (Database)
+- 🐳 Docker (Containerization)
 
 ---
 
 ## 🚀 Features
 
-* User registration and login
-* Secure authentication and authorization
-* Role-based access control (Admin/User)
-* Create, view, update, and delete (CRUD) users
-* Search and manage user records
-* Responsive and user-friendly interface
-* RESTful API architecture
-* MySQL database integration
-* Dockerized application for easy deployment
+- Add User
+- Update User
+- Delete User
+- View All Users
+- REST API Integration
+- Dockerized Setup (One command run)
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 ### Frontend
-
-* React.js
-* HTML5
-* CSS3
-* JavaScript
-* Axios
+- React.js
+- Axios
+- Bootstrap / Tailwind
 
 ### Backend
-
-* Spring Boot
-* Spring Web
-* Spring Data JPA
-* Spring Security
-* Maven
+- Spring Boot
+- Spring Data JPA
+- REST APIs
 
 ### Database
-
-* MySQL
+- MySQL
 
 ### DevOps
-
-* Docker
-* Docker Compose
-
-### Tools
-
-* Git & GitHub
-* Postman
-* IntelliJ IDEA / VS Code
+- Docker
+- Docker Compose
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
-```text
-user-management-system/
+```
+User-Management-System/
 │
-├── backend/ UserManagementSystem             # Spring Boot application
-│   ├── src/
-│   ├── pom.xml
-│   └── Dockerfile
-│
-├── frontend/   user-frontend               # React application
-│   ├── src/
-│   ├── package.json
-│   └── Dockerfile
-│
+├── frontend/
+├── backend/
+├── screenshots/
 ├── docker-compose.yml
 └── README.md
 ```
 
 ---
 
-## ⚙️ Prerequisites
+## ⚙️ How to Run Project (Using Docker)
 
-Before running the project, make sure you have:
-
-* Java 17 or later
-* Node.js 18+
-* MySQL 8+
-* Maven
-* Docker
-* Docker Compose
-
----
-
-## 🚀 Running the Application
-
-### Option 1: Run with Docker (Recommended)
-
-Clone the repository:
+### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/Samruddhi-Warake/UserManagementSystem.git
+git clone https://github.com/your-username/user-management-system.git
 cd user-management-system
 ```
 
-Build and start the containers:
+---
+
+### 2️⃣ Run Using Docker Compose
 
 ```bash
-docker compose up --build
+docker-compose up --build
 ```
-
-The application will be available at:
-
-* Frontend: `http://localhost:3000`
-* Backend API: `http://localhost:8080`
 
 ---
 
-### Option 2: Run Without Docker
+### 3️⃣ Access Application
 
-#### Backend
+- Frontend → http://localhost:3000
+- Backend API → http://localhost:8081/users
+- MySQL → localhost:3307
 
+---
+
+## 🧾 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /users | Get all users |
+| POST | /users | Add new user |
+| PUT | /users/{id} | Update user |
+| DELETE | /users/{id} | Delete user |
+
+---
+
+## 🗄 Database Config
+
+```properties
+Database: userdb
+Username: root
+Password: root
+```
+
+---
+
+## 🖼 Screenshots
+
+### Dashboard
+![Dashboard](screenshots/Home.png)
+
+### Add
+![Users](screenshots/Add.png)
+
+### Update
+![Users](screenshots/Update.png)
+
+### View
+![Users](screenshots/View.png)
+
+
+---
+
+## 🧪 Run Without Docker (Optional)
+
+### Backend
 ```bash
 cd backend
 mvn spring-boot:run
 ```
 
-#### Frontend
-
+### Frontend
 ```bash
 cd frontend
 npm install
 npm start
 ```
 
-Ensure MySQL is running and update your database configuration in the Spring Boot application properties.
-
 ---
 
-## 🗄️ Database
-
-The application uses **MySQL** as the primary database.
-
-Configure your database connection in:
-
-```properties
-application.properties
-```
-
-Example:
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/sitdemo
-spring.datasource.username=root
-spring.datasource.password=root
-
-spring.jpa.hibernate.ddl-auto=update
-```
-
----
-
-## 📡 REST API
-
-Example endpoints:
-
-| Method | Endpoint             | Description         |
-| ------ | -------------------- | ------------------- |
-| POST   | `/api/auth/register` | Register a new user |
-| POST   | `/api/auth/login`    | Authenticate user   |
-| GET    | `/api/users`         | Get all users       |
-| GET    | `/api/users/{id}`    | Get user by ID      |
-| PUT    | `/api/users/{id}`    | Update user         |
-| DELETE | `/api/users/{id}`    | Delete user         |
-
----
-
-## 🔒 Security
-
-* Spring Security
-* Password encryption
-* Role-based authorization
-* Protected REST APIs
-
----
-
-## 🐳 Docker
-
-The project includes:
-
-* Dockerfile for the Spring Boot backend
-* Dockerfile for the React frontend
-* Docker Compose configuration for running the complete application
-
-Start all services with:
+## 📦 Stop Containers
 
 ```bash
-docker compose up --build
-```
-
-Stop all services:
-
-```bash
-docker compose down
+docker-compose down
 ```
 
 ---
 
-## 📸 Screenshots
+## 👨‍💻 Author
 
-Add screenshots of your application here.
-
----
-
-
-
-
-
+- Name: Samruddhi Warake
+- GitHub: https://github.com/Samruddhi-Warake
